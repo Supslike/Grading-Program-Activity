@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Grading Program</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="grading-system-icon-isolated-background-vector-illustration_547674-815.avif" type="image/x-icon">
+</head>
+<body>
+    <div class="text-area">
+        <h1>Card Grading System</h1>
+        <p>The grading system for the semester measures the overall academic performance by computing the general average, incorporating scores from quarters 1 and 2 and quarters 3 and 4 into the respective calculations.</p>
+    </div>
+    <div class="button-holder">
+        <button id="add-subject">Add Subject</button>
+        <button id="remove-subject">Remove Subject</button>
+        <button id="preset1">Preset 1</button>
+    </div>
+    <table border="1" id="main-card">
+        <tbody id="body-card">
+            <tr>
+                <th class="top-table" id="sub-col" rowspan="2">Subject</th>
+                <th class="top-table" colspan="2">1st Semester</th>
+                <th class="top-table" colspan="2">2nd Semester</th>
+                <th class="top-table" rowspan="2">Final Grade</th>
+                <th class="top-table" rowspan="2">Remarks</th>
+            </tr>
+            <tr>
+                <th class="top-table">1st Quarter</th>
+                <th class="top-table">2nd Quarter</th>
+                <th class="top-table">3rd Quarter</th>
+                <th class="top-table">4th Quarter</th>
+            </tr>
+            <tr id="final-grade-row">
+                <td>Final Grade</td>
+                <td id="1st-final"></td>
+                <td id="2nd-final"></td>
+                <td id="3rd-final"></td>
+                <td id="4th-final"></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr id="gen-ave-row">
+                <td>General Average for the Semester</td>
+                <td colspan="2" id="1stsem-final">100</td>
+                <td colspan="2" id="2ndsem-final">100</td>
+                <td id="final-average">100</td>
+                <td id="final-remark">Promoted!</td>
+            </tr>
+        </tbody>
+    </table> 
+    <div class="filler"></div>   
+    <div class="rating">
+        <h2>Your Final Rating: </h2>
+        <h3 id="rating">NOTHING!</h3>
+        <p id="rating-description">Well played!, input some grades first. Remember that you can rename subjects.</p>
+    </div>  
+    <script src="script.js"></script>
+</body>
+</html>
