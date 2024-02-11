@@ -10,6 +10,7 @@ const final_average = document.getElementById("final-average");
 const final_remark = document.getElementById("final-remark");
 const rating = document.getElementById("rating");
 const rating_desc = document.getElementById("rating-description");
+const letter_grade = document.getElementById("letter-grade");
 
 var required_info = ["subject-name", "0", "1", "2", "3"];
 var labeler = ["final", "remark"];
@@ -77,32 +78,40 @@ function UpdateStats() {
         case final_grade === 100:
             rating.textContent = "💯 IMPOSSIBLE 💯";
             rating_desc.textContent = "You did the impossible! You nailed it! 🤩🎖️";
+            letter_grade.textContent = "Your Final Rating: A+";
             break;
         case final_grade >= 98 && final_grade <= 99:
+            letter_grade.textContent = "Your Final Rating: A+";
             rating.textContent = "🌟 OUTSTANDING 🌟";
             rating_desc.textContent = "You standout in your class very well! 😯🎉";
             break;
         case final_grade >= 95 && final_grade <= 97:
+            letter_grade.textContent = "Your Final Rating: A";
             rating.textContent = "🎖️ EXCELLENT 🎖️";
             rating_desc.textContent = "Your excellence showed in fashionable results. 🤩🙏";
             break;
         case final_grade >= 90 && final_grade <= 94:
+            letter_grade.textContent = "Your Final Rating: A-";
             rating.textContent = "✨ VERY GOOD ✨";
             rating_desc.textContent = "Your performance is very commendable. 🌟✨";
             break;
         case final_grade >= 85 && final_grade <= 89:
+            letter_grade.textContent = "Your Final Rating: B+";
             rating.textContent = "🔥 GOOD 🔥";
             rating_desc.textContent = "Your performance is commendable. 🌟🔥";
             break;
         case final_grade >= 80 && final_grade <= 84:
+            letter_grade.textContent = "Your Final Rating: B";
             rating.textContent = "🙏 SATISFACTORY 🙏";
             rating_desc.textContent = "Your performance meets expectations. 🎉🎖️";
             break;
         case final_grade >= 75 && final_grade <= 79:
+            letter_grade.textContent = "Your Final Rating: B-";
             rating.textContent = "🎉 PASS 🎉";
             rating_desc.textContent = "Congratulations! You passed. 🤩😯";
             break;
         default:
+            letter_grade.textContent = "Your Final Rating: C";
             rating.textContent = "⛔️ FAIL ⛔️";
             rating_desc.textContent = "Unfortunately, you did not meet the passing criteria. 😔😔";
     }
