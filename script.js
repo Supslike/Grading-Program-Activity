@@ -132,6 +132,7 @@ function add_row(name) {
             inputElement.type = "text";
             inputElement.value = name
             inputElement.classList = "input-text";
+            inputElement.name = "Subject-Name"
         }
         else {
             inputElement.type = "number";
@@ -139,8 +140,8 @@ function add_row(name) {
             inputElement.classList = "input-int";
             inputElement.max = "100";
             inputElement.min = "50";
+            inputElement.id = `${row_count}-${required_info[i]}`;
         }
-        inputElement.id = `${row_count}-${required_info[i]}`;
         inputElement.addEventListener("input", UpdateStats);
         var new_column = document.createElement("td");
         new_column.appendChild(inputElement)
